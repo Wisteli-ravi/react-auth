@@ -1,0 +1,62 @@
+{
+    "clients": [
+        {
+            "key": "1",
+            "name": "Jon Brown",
+            "identifier": "32",
+            "displayName": "New York No. 1 Lake Pak"
+        },
+        {
+            "key": "2",
+            "name": "Je Black",
+            "identifier": "42",
+            "displayName": "London No. 1 Lake Park"
+        },
+        {
+            "key": "3",
+            "name": "Jm Green",
+            "identifier": "32",
+            "displayName": "Sydney No. 1 Lake Park"
+        },
+        {
+            "key": "4",
+            "name": "Jim Red",
+            "identifier": "32",
+            "displayName": "London No. 2 Lake Park"
+        }
+    ],
+    "client": {},
+    "users": {},
+    "user": {},
+    "auth-user": {
+        "name": "Akshay Singh",
+        "firstName": "Akshay",
+        "lastName": "Singh",
+        "city": "aaa",
+        "zipCode": "3214  ",
+        "cell": "8765432156",
+        "gender": "male",
+        "userName": "asingh",
+        "home_addr_1": "aaa",
+        "dob": "05-05-2015",
+        "role": "admin",
+        "picture": "https://weavers.space/img/default_user.jpg",
+        "phoneNumbers": [
+            {
+                "title": "Cell",
+                "number": "+18765432156"
+            },
+            {
+                "title": "Home",
+                "number": ""
+            }
+        ],
+        "profile": "us-east-1:e8262bef-b65d-444f-b378-46a4fc008c96",
+        "id": 563,
+        "internal_id": "976",
+        "remote_monitoring": "",
+        "userOrg": [
+            60
+        ]
+    }
+}

@@ -48,12 +48,12 @@ export const AdminLayout: React.FC<Props> = ({ children }) => {
         
       </Header>
         <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-          <div style={{ padding: 24, textAlign: 'center', background: colorBgContainer, minHeight: 360 }}>
+          <div style={{ padding: 24, background: colorBgContainer, minHeight: 360 }}>
           <LayoutStyled>{children}</LayoutStyled>
           </div>
           
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ravi</Footer>
       </Layout>
     </Layout>
   );

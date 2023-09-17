@@ -1,16 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import { message, notification } from "antd";
 import { useQuery } from "react-query";
-import { createApiClient } from "apiClient";
+import { createApiClient } from "api/apiClient";
 import {  UserRoles } from "constants/roles";
 import { SuperAdminRoutes } from "./SuperAdminRoutes";
 import { ClientAdminRoutes } from "./ClientAdminRoutes";
 import { AdminRoutes } from "./AdminRoutes";
-//import { UserContext, UserContextState } from "contextApis/userContext";
-
+import { UserContext, UserContextState } from "contextApis/userContext";
 
 export const RoutesContainer: React.FC = () => {
-//  const userContext = useContext<UserContextState>(UserContext);
+  const userContext = useContext<UserContextState>(UserContext);
  
   const { data } = useQuery("userData", async () => {
     return await createApiClient().getLoggedInUserData();
@@ -19,7 +18,7 @@ export const RoutesContainer: React.FC = () => {
   const userRole = sessionStorage.getItem("userRole");
   useEffect(() => {
     if (data) {
-      // userContext.setLoggedInUserData(data);
+      userContext.setLoggedInUserData(data);
     }
   }, [data]);
 

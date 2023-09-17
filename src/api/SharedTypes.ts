@@ -1,5 +1,3 @@
-import { Moment } from "moment";
-
 
 interface PhoneNumber {
     readonly title: string;
@@ -39,4 +37,11 @@ export interface ResetPasswordResponse {
     readonly code: string;
     readonly detail_desc: string;
     readonly checked?: boolean;
+  }
+
+  export interface Client {
+    key: string;
+    name: string;
+    identifier: string;
+    displayName: string;
   }

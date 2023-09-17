@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import { Button, Form, Input, Modal, Radio } from "antd";
+import { Client } from "api/SharedTypes";
 
-interface Values {
-  title: string;
-  description: string;
-  modifier: string;
-}
+
 
 interface CollectionCreateFormProps {
   open: boolean;
-  onCreate: (values: Values) => void;
+  onCreate: (values: Client) => void;
   onCancel: () => void;
 }
 
