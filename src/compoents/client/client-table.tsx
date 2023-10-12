@@ -11,10 +11,11 @@ const accessToken = localStorage.getItem("access_token");
 
 const apiClient = createApiClient(accessToken!);
 
-const ClientTable: React.FC = () => {
-  const { data, error, isLoading } = useQuery("get-client-list", () =>
-    apiClient.getClients()
-  );
+interface ClientListProps {
+  data: any;
+}
+const ClientTable: React.FC<ClientListProps> = ({data}) => {
+  
 
   const items: MenuProps["items"] = [
     {

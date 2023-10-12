@@ -21,7 +21,7 @@ interface ApiClient {
   ) => Promise<DiagnosesList[]>;
   readonly resetPassword: (userId: string) => Promise<ResetPasswordResponse>;
   readonly getLoggedInUserData: () => Promise<UserData>;
-  readonly getClients: () => Promise<Client[]>;
+  readonly getClients: (loadUpdatedData?: boolean,) => Promise<Client[]>;
   readonly postClient: (client:Client) => Promise<Client>;
 }
 
@@ -113,9 +113,15 @@ export const createApiClient = (accessToken?: string): ApiClient => {
     }
   };
 
-  const getClients =async () => {
+  const getClients =async (loadUpdatedData?: boolean,) => {
     try{
-      const response  = await instance.get(PATHS.GET_CLIENT_LIST);
+      const response  = await instance.get(PATHS.GET_CLIENT_LIST,{
+        params: loadUpdatedData
+          ? {
+              timeStamp: Date.now(),
+            }
+          : null,
+      });
       return response.data;
     }catch( error){
       console.error(error);

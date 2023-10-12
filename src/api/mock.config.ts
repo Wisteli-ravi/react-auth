@@ -17,7 +17,15 @@ export const initializeAxiosMockAdapter = (instance: AxiosInstance) => {
 
 
 export const createClient = (client:any) => {
+    console.log(client.data);
+    client = {...JSON.parse(client.data), 
+        "key": "5",
+        "identifier": "43",
+       
+    }
+    console.log("ading clinet");
     console.log(client);
+    clientList = [...clientList, client];
     return [ 200, clientList];
 }
 
